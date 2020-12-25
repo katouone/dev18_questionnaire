@@ -10,6 +10,12 @@ $openFile = fopen('./data/data.txt','r');
 <head>
     <meta charset="UTF-8">
     <title>データまとめ</title>
+    <style>
+        table {
+            margin:auto
+        }
+    
+    </style>
 </head>
 <body>
 
@@ -29,6 +35,11 @@ $openFile = fopen('./data/data.txt','r');
 
     <?php
 
+    //XSS対策の関数を定義
+    function h ($value){
+        return htmlspecialchars($value,ENT_QUOTES);
+    }
+
     //開いたファイルのデータを格納する
     while ($data = fgets($openFile)){
 
@@ -39,15 +50,16 @@ $openFile = fopen('./data/data.txt','r');
 
         // echo '<br>';
         // var_dump($split_data);
+
     ?>
 
         <!-- 2行目以降に分割したデータを書き込む -->
         <tr>
-            <td><?php print(htmlspecialchars($split_data[0])); ?></td>
-            <td><?php print(htmlspecialchars($split_data[1])); ?></td>
-            <td><?php print(htmlspecialchars($split_data[2])); ?></td>
-            <td><?php print(htmlspecialchars($split_data[3])); ?></td>
-            <td><?php print(htmlspecialchars($split_data[4])); ?></td>
+            <td><?php print(h($split_data[0])); ?></td>
+            <td><?php print(h($split_data[1])); ?></td>
+            <td><?php print(h($split_data[2])); ?></td>
+            <td><?php print(h($split_data[3])); ?></td>
+            <td><?php print(h($split_data[4])); ?></td>
         
         </tr>
 

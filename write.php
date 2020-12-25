@@ -12,10 +12,9 @@ $time = date('Y-m-d H:i:s');
 //ファイルに書き込み
 $file = fopen('./data/data.txt','a');
 
-//
+//受け取ったデータをスラッシュで区切って1行に記入
 fwrite($file, $time.'/'.$name.'/'.$mail.'/'.$phone.'/'.$company."\n");
 fclose($file);
-
 
 ?>
 
