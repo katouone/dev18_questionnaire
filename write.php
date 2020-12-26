@@ -4,7 +4,7 @@
 $name = $_POST['name'];
 $mail = $_POST['mail'];
 $phone = $_POST['phone'];
-$company = $_POST['company'];
+$country = $_POST['country'];
 
 //時間の情報を取得
 $time = date('Y-m-d H:i:s');
@@ -13,7 +13,7 @@ $time = date('Y-m-d H:i:s');
 $file = fopen('./data/data.txt','a');
 
 //受け取ったデータをスラッシュで区切って1行に記入
-fwrite($file, $time.'/'.$name.'/'.$mail.'/'.$phone.'/'.$company."\n");
+fwrite($file, $time.'/'.$name.'/'.$mail.'/'.$phone.'/'.$country."\n");
 fclose($file);
 
 ?>
@@ -22,12 +22,17 @@ fclose($file);
 <head>
     <meta charset="utf-8">
     <title>入力完了しました</title>
+
+
+
+
+
     
 </head>
 
 <body>
-    <h2>入力完了しました</h2>
-    <h2>ありがとうございました</h2>
+    <h2>入力完了しました/Complete!</h2>
+    <h2>ありがとうございました/Thank you</h2>
 </body>
 
 </html>

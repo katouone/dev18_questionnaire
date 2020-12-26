@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-        <h1>連絡先記入フォーム</h1>
+        <h1>参加者連絡先記入フォーム</h1>
     </div>
 
     <div>
@@ -16,7 +16,7 @@
                 <p>お名前: <input type="text" name="name"></p>
                 <p>Email: <input type="text" name="mail"></p>
                 <p>電話番号: <input type="number" name="phone"></p>
-                <p>会社名: <input type="text" name="company"></p>
+                <p>国名: <input type="text" name="country"></p>
                 
                 
             </div>
