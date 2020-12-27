@@ -16,7 +16,7 @@
                 <p>お名前: <input type="text" name="name"></p>
                 <p>Email: <input type="text" name="mail"></p>
                 <p>電話番号: <input type="number" name="phone"></p>
-                <p>国名: <input type="text" name="country"></p>
+                <p>地名: <input type="text" name="country"></p>
                 
                 
             </div>
